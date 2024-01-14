@@ -662,5 +662,15 @@ cmp.setup {
   },
 }
 
+-- My Config
+
+-- Format on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+  buffer = buffer,
+  callback = function()
+      vim.lsp.buf.format { async = false }
+  end
+})
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
