@@ -672,5 +672,12 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end
 })
 
+--tabs
+local set = vim.opt -- set options
+set.tabstop = 4
+set.softtabstop = 8
+set.shiftwidth = 4
+
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
